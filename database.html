@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RAT Enhancement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Mailbox </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CLK Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h3 class="m-3">CLK Info</h3>
+      <!-- /container -->
+
+      <div class="w-75">
+        <div class="d-flex">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01"
+                >Select Page</label
+              >
+            </div>
+            <select
+              class="form-select"
+              id="inputGroupSelect01"
+              onchange="newSelection(this.value)"
+            >
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <h5>Categories</h5>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item ">
+            <a class="nav-link" href="index.html">Page Overview</a>
+          </li>
+          <li class="list-group-item bg-light">
+            <a value="1" class="nav-link" href="database.html">Database</a>
+          </li>
+          <li class="list-group-item"><a class="nav-link"  value="2">API / Webservice</a></li>
+          <li class="list-group-item"><a class="nav-link"  value="3">Business Rules</a></li>
+          <li class="list-group-item"><a class="nav-link"  value="4">Messaging</a></li>
+          <li class="list-group-item">
+            <a class="nav-link"  value="5">RAT Tickets</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- beginning of page details -->
+      <hr />
+
+      <section class="detail-header d-flex flex-column">
+        <section class="d-flex justify-content-between">
+          <h4 mt-2 mb-2>Database Info</h4>
+          <button
+            class="btn btn-primary btn-sm"
+            onclick="handleEdit()"
+            id="editButton"
+          >
+            Edit
+          </button>
+        </section>
+        <p class="m-0 p-0 text-muted small">
+          Created By: Sukhdev on May 12, 2022
+        </p>
+        <p class="m-0 p-0 text-muted small">Updated By: Alex on May 13, 2022</p>
+      </section>
+
+      <section class="form-group mt-2">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea class="form-control" id="description" rows="4">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+		</textarea
+        >
+      </section>
+
+      <!-- closing div for container -->
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

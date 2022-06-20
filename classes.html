@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RAT Enhancement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Mailbox </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CLK Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h3 class="m-3">CLK Info</h3>
+      <!-- /container -->
+
+      <div class="w-75">
+        <div class="d-flex">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01"
+                >Select Page</label
+              >
+            </div>
+            <select
+              class="form-select"
+              id="inputGroupSelect01"
+              onchange="newSelection(this.value)"
+            >
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <h5>Categories</h5>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item ">
+            <a>Page Overview</a>
+          </li>
+          <li class="list-group-item">
+            <a value="1" class="nav-link" href="database.html">Database</a>
+          </li>
+          <li class="list-group-item bg-light">
+            <a class="nav-link" href="classes.html" value="2">Classes</a>
+          </li>
+          <li class="list-group-item">
+            <a class="nav-link" value="2">API / Webservice</a>
+          </li>
+          <li class="list-group-item">
+            <a class="nav-link" value="3">Business Rules</a>
+          </li>
+          <li class="list-group-item">
+            <a class="nav-link" value="4">Messaging</a>
+          </li>
+          <li class="list-group-item">
+            <a class="nav-link" value="5">RAT Tickets</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- beginning of page details -->
+      <hr />
+
+      <section class="detail-header d-flex flex-column">
+          <h4 mt-2 mb-2>Classes Used</h4>
+      </section>
+
+			<div class="d-flex w-100 p-3">
+				<ul class="list-group w-25">
+					<li class="list-group-item">
+						<button onclick="handleClassBtnClick(1)" class="btn btn-outline-primary">Foo.java</button>
+					</li>
+					<li class="list-group-item">
+						<button onclick="handleClassBtnClick(2)" class="btn btn-outline-primary">Bar.java</button>
+					</li>
+					<li class="list-group-item">
+						<button onclick="handleClassBtnClick(3)" class="btn btn-outline-primary">FooBar.java</button>
+					</li>
+					<li class="list-group-item">
+						<button onclick="handleClassBtnClick(4)" class="btn btn-outline-primary">Bazz.java</button>
+					</li>
+					<li class="list-group-item">
+						<button onclick="handleClassBtnClick(5)" class="btn btn-outline-primary">FooBazz.java</button>
+					</li>
+				</ul>
+				<textarea id="classDescription" cols="30" rows="10" class="form-control p-3 w-100">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ex necessitatibus, earum temporibus placeat odit id accusantium distinctio, perferendis excepturi at magnam. Odio doloremque voluptate magnam nisi, porro ipsa facilis.
+				</textarea>
+
+			</div>
+
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RAT Enhancement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Mailbox </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CLK Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h3 class="m-3">CLK Info</h3>
+      <!-- /container -->
+
+      <div class="w-75">
+        <div class="d-flex">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01"
+                >Select Page</label
+              >
+            </div>
+            <select
+              class="form-select"
+              id="inputGroupSelect01"
+              onchange="newSelection(this.value)"
+            >
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <h5>Categories</h5>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">
+            <a>Page Overview</a>
+          </li>
+          <li class="list-group-item">
+            <a value="1" class="nav-link" href="database.html">Database</a>
+          </li>
+          <li class="list-group-item">
+            <a class="nav-link" href="classes.html" value="2">Classes</a>
+          </li>
+          <li class="list-group-item bg-light">
+            <a class="nav-link" href="api.html" value="2">API / Webservice</a>
+          </li>
+          <li class="list-group-item">
+            <a class="nav-link" value="3">Business Rules</a>
+          </li>
+          <li class="list-group-item">
+            <a class="nav-link" value="4">Messaging</a>
+          </li>
+          <li class="list-group-item">
+            <a class="nav-link" value="5">RAT Tickets</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- beginning of page details -->
+      <hr />
+
+          <h4 mt-2 mb-2>API / Webservice</h4>
+
+					<h6>Endpoints</h6>
+					<ul class="list-group">
+						<li class="list-group-item">
+						 <h6>
+							/CreditLinkWeb/removePDF.do
+						 </h6>	
+						 <ul>
+							<li>an endpoint that does this and that ...</li>
+						 </ul>
+</li>
+						<li class="list-group-item"></li>
+						<li class="list-group-item"></li>
+						<li class="list-group-item"></li>
+					</ul>
+
+      <section class="form-group mt-2">
+    <button class="btn btn-sm mt-3 mb-2" onclick="handleAddComment()">Add Comment +</button>
+    <ul class="small-font list-group px-3" id="commentList">
+      <li class="list-group-item fw-lighter">
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document - <span class="fw-normal"> Sukhdev (May 14, 2022) </span>
+      </li>
+      <li class="list-group-item fw-lighter">I wonder if this is what Philip had in mind - <span class="fw-normal">Sukhdev (May 15, 2022)</span></li>
+    </ul>
+      </section>
+
+      <!-- closing div for container -->
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
